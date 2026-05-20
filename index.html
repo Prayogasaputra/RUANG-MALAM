@@ -224,6 +224,7 @@
         membaca kata-kata yang menenangkan,
         dan merasa tidak sendiri di tengah malam.
       </p>
+      <p id="typing"></p>
 
       <div class="btn-group">
         <a href="#" class="btn">Titipkan Pesan</a>
@@ -282,6 +283,21 @@
   <footer>
     © 2026 Ruang Malam — Karya @prayogasaputra
   </footer>
+  
+<script>
+const text = "Tempat kecil untuk pikiran yang lelah...";
+let i = 0;
 
+function typing(){
+   if(i < text.length){
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 60);
+   }
+}
+
+typing();
+</script>
+  
 </body>
 </html>
